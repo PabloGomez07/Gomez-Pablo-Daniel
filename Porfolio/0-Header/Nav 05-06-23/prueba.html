@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="Es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="Normalize.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyMbxj9E+Nu2QK82mg+2/8gYT5TBfFWT6IaZTRpfxcSHtfvavD7K79+aDtKI9fVu" crossorigin="anonymous" />
+
+	<title>Barra de Navegacion 2</title>
+</head>
+<body>
+	<!-- CABECERA DE LA PAGINA -->
+	<header>
+		<!-- BARRA DE NAVEGACION -->
+		<nav>
+			<input type="checkbox" id="check">
+
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"></i>
+			</label>
+			<a href="#" class="enlace">
+				<img src="home.png" alt="Logo" class="logo">
+			</a>
+			<ul>
+				<li><a href="#" class="active">Inicio</a></li>
+				<li><a href="#">Nosotros</a></li>
+				<li><a href="#">Servicios</a></li>
+				<li><a href="#">Portafolio</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+
+		</nav>
+		<section>
+			
+		</section>
+	</header>
+
+	<!-- PARTE CENTRAL DE LA PAGINA -->
+	<main>
+		
+	</main>
+
+	<!-- PIE DE PAGINA -->
+	<footer>
+		
+	</footer>
+<script src="https://kit.fontawesome.com/876a2ff397.js" crossorigin="anonymous"></script>
+</body>
+
+<style type="text/css">
+/*	PALETA DE COLORES QUE USE: Naranjas y Marrones */
+/*	1 = #755104 ,2 = #755104 , 3 = #F5A907 , 4 = #755C27 , 5 = #C28606 ;*/
+
+*{
+	list-style: none;
+	text-decoration: none;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+	/*BARRA DE NAVEGACION*/
+	nav{
+		background: orange;
+		width: 100%;
+		height: 80px;
+
+	}
+	nav ul{
+		float: right;
+		margin-right: 20px;
+	}
+	nav ul li{
+		display: inline-block;
+		line-height: 80px;
+		margin: 0px 5px;
+
+	}
+	nav ul li a{
+		color: white;
+		font-size: 18px;
+		padding: 7px 13px;
+		text-transform: uppercase; /* PONE EL TXT EN MAYUSCULA*/
+		border-radius: 3px;
+
+
+	}
+	li a.active , li a:hover{
+		background: #755C27 ;
+		transition: .5s;
+	}
+/*	---------------------------------------*/
+
+	/*	LOGO BARRA DE NAVEGACION*/
+	
+	.enlace{
+		position: absolute;
+		padding: 20px 50px;
+	}
+	.logo{
+		height: 40px;
+	}
+
+/*	---------------------------------------*/
+
+	.checkbtn{
+		font-size: 30px;
+		color: #FFFFFF;
+		line-height: 80px; /*MISMO TAMAÑO QUE EL NAV*/
+		float: right;
+		margin-right: 20px;
+		cursor: pointer;
+		display: none;
+	}
+	#check{display: none;}
+
+	section{
+		background: url(LogoPagina.png) no-repeat;
+		background-size: contain;
+		background-position:center center ;
+		height: calc(100vh - 80px);
+
+	}
+/*	---------------------------------------*/
+		
+@media (max-width: 952px) {						/*TABLET VIEWPORT*/
+/*	LOGO BARRA DE NAVEGACION*/	
+	.enlace{
+		padding-left: 20px;
+	}
+
+/*	---------------------------------------*/
+	/*BARRA DE NAVEGACION*/
+	nav ul li a{
+		font-size: 15px;
+	}
+	
+}
+@media (max-width: 680px) {
+  .checkbtn {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #755C27;
+    margin-top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0px;
+    list-style: none;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: white;
+    padding: 10px 25px;
+  }
+  li a:hover,
+  li a.active {
+    background: #F5A907;
+    color: #FFFFFF;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #755C27;
+    margin-top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    margin-left: 0;
+    transition-property: left, margin-left;
+  }
+}
+
+</style>
+
+<script src="https://kit.fontawesome.com/876a2ff397.js" crossorigin="anonymous"></script>
+</html>

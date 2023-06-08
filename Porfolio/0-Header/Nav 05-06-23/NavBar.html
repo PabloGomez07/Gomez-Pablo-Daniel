@@ -18,7 +18,13 @@
 				<li class="item1 active"><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
 				<li class="item2"><a href="#"><i class="fa-brands fa-shopify"></i> Servicios</a></li>
 				<li class="item3"><a href="#"><i class="fa-solid fa-layer-group"></i> Portafolio</a></li>
-				<li class="item4"><a href="#"><i class="fa-solid fa-arrow-down"></i> Acerca de</a></li>
+				<li class="item4"><a href="#"><i class="fa-solid fa-arrow-down"></i> Acerca de</a>
+					<ul class="subItem">
+						<li class="subItem-item4"><a href="#">Paginas Web</a></li>
+						<li class="subItem-item4"><a href="#">Softwares</a></li>
+						<li class="subItem-item4"><a href="#">Proyectos <br>personalizados</a></li>
+					</ul>
+				</li>
 				<li class="item5"><a href="#"><i class="fa-solid fa-circle-info"></i> Contacto</a></li>
 			</ul>
 		</nav>
@@ -83,7 +89,7 @@
 		list-style: none;
 		height: 30px;
 		border-radius: 10px;
-		
+		font-size: 17px;
 	}
 	ul {
 	  list-style: none; /* Elimina el punto/bullet de la lista */
@@ -99,11 +105,30 @@
 	  color: black; /* Cambia el color del texto de los enlaces a negro */
 	}
 
+	.subItem{
+		margin-top: 35px;
+		padding: 0px;
+		border: 2px solid #755104 ;
+		border-radius: 10px;
+		background-color: #C28606;
+		display: none;
+
+	}
+	.item4:hover > .subItem{
+  		display: block;
+
+	}
+	.subItem-item4{
+		margin: 0px;
+		padding: 15px;
+/*		border: 2px solid green ;*/
+
+	}
 /*	---------------------------------------*/
 
 	/*	LOGO BARRA DE NAVEGACION*/
 	.img-nav{
-		max-width: 20%;
+		max-width: 10%;
 		border: 2px  #FFFFFF;
 		border-style: double ;
 		background-color: #755c27;
