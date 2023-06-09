@@ -1,0 +1,169 @@
+<!Doctype html>
+<html lang="Es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta name="viewport"  content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="Normalize.css">
+	<script src="https://kit.fontawesome.com/876a2ff397.js" crossorigin="anonymous"></script>
+	<title>Barra de Navegacion 3</title>
+
+	<!-- ESTILO DE LA PAGINA -->
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+
+		}
+		body{
+			padding: 90px 20px 0;
+			background: #F1F2D8;
+		}
+
+		.header{
+			background-color: #E1F25C;
+			position: fixed;
+			height: 80px;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+		nav{
+			display: flex;
+			justify-content: space-between;
+			max-width: 992px;
+			margin: 0 auto;
+		}
+		.nav-link{
+			color: #011526;
+			text-decoration: none;
+		}
+		.logo{
+			font-size: 30px;
+			font-weight: bold;
+			padding: 0 40px;
+			line-height: 80px; /*PARA CENTRAR A LA CAJA*/
+		}
+		.nav-menu{
+			display: flex;
+			margin-right: 40px;
+/*			border: 2px solid red;*/
+			margin-top: 0px;
+			list-style: none;
+		}
+		.nav-menu-item{
+			margin: 0 10px;
+			font-size: 18px;
+			line-height: 80px;
+			text-transform: uppercase;
+			width: max-content;
+		}
+		.nav-menu-link{
+			padding: 8px 12px;
+			border-radius: 3px;
+		}
+		.nav-menu-link:hover , .active{
+			background-color: #011526;
+			color: #F2F2F2;
+			transition: 0.7s;
+
+		}
+		.navtoggle{
+			font-size: 30px;
+			padding: 0 20px;
+			line-height: 60px;
+			display: none;
+			cursor: pointer;
+		}
+
+
+		@media (max-width: 768px) {
+			body{
+				padding-top: 70px;
+			}
+			.header{
+				background-color: #E1F25C;
+				height: 60px;
+			}
+			.logo{
+				padding: 0 20px;
+				line-height: 60px; /*PARA CENTRAR A LA CAJA*/
+			}
+			.nav-menu-item{
+				
+				font-size: 15px;
+				line-height: 70px;
+				
+			}
+			.nav-menu-link{
+				color: #EEF280;
+
+			}
+			.nav-menu-link:hover , .active{
+				color: #011526;
+				background-color: #EEF280;
+				
+			}
+			.nav-menu{
+				flex-direction: column;
+				margin: 0px;
+				background-color: #011526;
+				position: fixed;
+				left: 0;
+				top: 60px;
+				width: 100%;
+				align-items: center;
+				padding: 20px 0;
+
+				height: calc(100% - 60px);
+				overflow-y: auto;
+
+				left: 100%;
+				transition: left 0.7s ;
+			}
+			.navtoggle{
+				
+				display: block;
+			}
+			.nav-menu_visible{
+				left: 0;
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<header class="header">
+		<nav class="nav">
+			<a href="#" class="logo nav-link">Logo</a>
+			<butoon class="navtoggle">
+				<i class="fas fa-bars"></i>
+			</butoon>
+			<ul class="nav-menu">
+				<li class="nav-menu-item "><a href="#" class="nav-menu-link nav-link active">Blog</a>
+				</li>
+				<li class="nav-menu-item "><a href="#" class="nav-menu-link nav-link">Videos</a>
+				</li>
+				<li class="nav-menu-item "><a href="#" class="nav-menu-link nav-link">Sobre Mi</a>
+				</li>
+				<li class="nav-menu-item "><a href="#" class="nav-menu-link nav-link">Contacto</a>
+				</li>
+			</ul>
+			
+		</nav>
+	</header>
+	<section>
+		
+		
+	</section>	
+	<script type="text/javascript">
+			
+			const navtoggle = document.querySelector(".navtoggle");
+			const navmenu = document.querySelector(".nav-menu");
+
+			navtoggle.addEventListener("click", () => {
+				navmenu.classList.toggle("nav-menu_visible");
+			});
+	</script>	
+
+</body>
+</html>
